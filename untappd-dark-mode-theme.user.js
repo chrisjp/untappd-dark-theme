@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name          Untappd Dark Theme (2021 Update)
-// @version       1.0.0
 // @namespace     https://github.com/chrisjp
+// @version       1.1.0
 // @description	  A dark theme for Untappd
 // @license       MIT
 // @author        Chris Phillips (LazyPyro)
@@ -18,6 +18,7 @@
 // @grant GM_addStyle
 // ==/UserScript==
 
+(function() {
 GM_addStyle(`
 /** body */
 
@@ -39,7 +40,7 @@ h3,
 }
 
 header {
-    background-color: #151515;
+    background-color: #151515 !important;
 }
 
 header .inner .logo img {
@@ -48,8 +49,25 @@ header .inner .logo img {
 
 header .inner .logo,
 header .inner .logo img {
-    width: 150px;
-    height: 46px;
+    width: 150px !important;
+    height: 46px !important;
+}
+
+
+/** links */
+
+a {
+    color: #ffc000;
+}
+
+header #nav_site ul li a {
+    color: #ffc000 !important;
+}
+
+.beer-page .main .b_info .top .basic .name .subsidiary a,
+.brewery-page .main .b_info .top .basic .name .subsidiary a,
+.venue-page .main .b_info .top .basic .name .subsidiary a {
+    color: #ffc000;
 }
 
 
@@ -99,20 +117,6 @@ header .inner .logo img {
 }
 
 
-/** links */
-
-a,
-header #nav_site ul li a {
-    color: #ffc000;
-}
-
-.beer-page .main .b_info .top .basic .name .subsidiary a,
-.brewery-page .main .b_info .top .basic .name .subsidiary a,
-.venue-page .main .b_info .top .basic .name .subsidiary a {
-    color: #ffc000;
-}
-
-
 /** text (descriptions etc) */
 
 .beer-page .main .b_info .top .basic .name .brewery,
@@ -142,14 +146,11 @@ header #nav_site ul li a {
 }
 
 
-/* ---checkin comment text-- */
+/** checkin comment */
 
 .activity #main-stream .item .checkin .top .checkin-comment .comment-text {
     color: white;
 }
-
-
-/** checkin comment box */
 
 .activity #main-stream .item .checkin .top .checkin-comment {
     background: #1d1d1d;
@@ -164,9 +165,6 @@ header #nav_site ul li a {
     border-color: transparent transparent #444;
 }
 
-
-/** checkin metadata */
-
 .activity #main-stream .item .checkin .top .checkin-comment .badge span,
 .activity #main-stream .item .checkin .top .checkin-comment .purchased,
 #gallery-modal .bottom .beer-details .beer span a,
@@ -180,6 +178,51 @@ header #nav_site ul li a {
     border-radius: 15px;
 }
 
+
+/** checkin page */
+
+.indiv_item .box {
+    background-color: #222 !important;
+}
+
+.indiv_item .user-info,
+.indiv_item .checkin .checkin-extra, .indiv_item .checkin .checkin-info {
+    border-color: #444 !important;
+}
+
+.indiv_item .checkin .checkin-info .comment,
+.indiv_item .checkin .checkin-extra .flavor p,
+.indiv_item .checkin .checkin-extra .purchased p,
+.indiv_item .checkin .checkin-extra .tagged-friends p,
+.indiv_item .checkin .checkin-info .rating-serving .serving,
+.indiv_item .cheers .count {
+    color: white !important;
+}
+
+.indiv_item .checkin .checkin-info .beer span a,
+.indiv_item .checkin .checkin-bottom .time {
+    color: #888 !important;
+}
+
+.indiv_item .user-info .name p a,
+.indiv_item .checkin .checkin-info .beer p a {
+    color: #ffc000 !important;
+}
+
+.indiv_item .user-info .name p a:hover,
+.indiv_item .checkin .checkin-info .beer p a:hover,
+.indiv_item .checkin .checkin-info .beer span a:hover {
+    color: #c60 !important;
+}
+
+.indiv_item .cheers:after {
+    background: transparent !important;
+}
+
+.indiv_item .comments .comment_form textarea {
+    background-color: #404040;
+    color: #ddd;
+}
 
 /** checkin, heading, search item, stats border color  */
 
@@ -487,6 +530,58 @@ header #nav_site ul li a {
     color: #888;
 }
 
+.m-card {
+    background-color: #555;
+}
+
+.a-banner.a-banner--venue-lg h3,
+.non-vv-banner h3 {
+    color: white;
+}
+
+.a-banner.a-banner--venue-lg p,
+.non-vv-banner p {
+    color: #eee;
+}
+
+.venue-page .venue-body .content {
+    background-color: #222;
+}
+
+.venue-page .venue-inner .venue-left .content h3 {
+    color: white;
+    border-color: #444;
+}
+
+.venue-page .venue-body .venue-details .hours ul li .day-item,
+.venue-page .venue-body .venue-details .hours ul li .hours-item,
+.venue-page .venue-body .content .venue-content .menu-section-list li .beer-prices p .price,
+.venue-page .venue-body .content .venue-content .menu-section-list li .beer-prices p .size {
+    color: white;
+    background-color: #111;
+}
+
+.venue-page .venue-body .venue-details .hours ul li .hours-item span {
+    color: white;
+}
+
+.venue-page .venue-body .content .venue-content .menu-select.multi {
+    color: white;
+    background-color: #111;
+}
+
+.venue-page .venue-body .content .venue-content .menu-section-list li,
+.venue-page .venue-body .venue-activity ul li,
+.venue-page .venue-body .venue-events ul li,
+.venue-page .venue-inner .venue-left .content .more {
+    border-color: #444;
+}
+
+.venue-page .venue-body .content .venue-content .menu-section-list li .beer-info .beer-details h5 em,
+.venue-page .venue-body .content .venue-content .menu-section-list li .beer-info .beer-details h6,
+.venue-page .venue-body .venue-activity ul li .details h5 {
+    color: #ddd;
+}
 
 /** lists */
 
@@ -523,6 +618,15 @@ header #nav_site ul li a {
 .modal.create-list .content p select {
     background-color: #404040;
     color: #ddd;
+}
+
+.action-menu .action-list,
+.user_profile .profile_header .content .user-info .info .friend-button .friend-more .friend-more-pop {
+    background-color: #404040 !important;
+}
+
+.action-menu .action-more-btn:hover {
+    color: white !important;
 }
 
 
@@ -580,3 +684,4 @@ header #nav_site ul li a {
 }
 
 `);
+})();
