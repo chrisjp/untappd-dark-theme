@@ -417,6 +417,11 @@ header #nav_site ul li a {
     color: #888;
 }
 
+.friends-list .find .find-inner .search-friends form input[type=text] {
+    background-color: #333;
+    color: #ddd;
+}
+
 
 /** beer history */
 
