@@ -417,7 +417,8 @@ header #nav_site ul li a {
     color: #888;
 }
 
-.friends-list .find .find-inner .search-friends form input[type=text] {
+.friends-list .find .find-inner .search-friends form input[type=text],
+.friends-list .current .top .filters select {
     background-color: #333;
     color: #ddd;
 }
@@ -433,6 +434,14 @@ header #nav_site ul li a {
 .distinct-list .distinct-list-content .distinct-list-list .beer-item .ratings p,
 .distinct-list .distinct-list-content .distinct-list-list .beer-item .details p {
     color: #888;
+}
+
+.menu-filter-options .filter-toggles .filter-holder div p,
+.search-distance .distance-select div p,
+.menu-filter-options .filter-toggles .filter-holder div select,
+.search-distance .distance-select div select {
+    background-color: #333;
+    color: #ddd;
 }
 
 /** stats */
@@ -461,6 +470,10 @@ header #nav_site ul li a {
     background-color: #444;
 }
 
+.badge-sort {
+    background-color: #333;
+    color: #ddd;
+}
 
 /** search filters */
 
@@ -533,6 +546,11 @@ header #nav_site ul li a {
 .modal.checkin .inner form .checkbottom .location .loc-main.loading .loc-add,
 .venue-page .venue-body .venue-activity ul li .details .time a {
     color: #888;
+}
+
+.distinct-list .distinct-list-content .filters div p select {
+    background-color: #404040;
+    color: #ddd;
 }
 
 .m-card {
@@ -641,13 +659,23 @@ header #nav_site ul li a {
     color: #aaa;
 }
 
-.account-settings .input p,
+.account-settings .input p {
+    background-color: transparent !important;
+    border-color: #444;
+}
+
 .account-settings .settings-section ul.social-connect li .connected {
     background-color: #1b1b1b;
 }
 
+.account-settings .settings-section ul li span.label,
+.account-settings .settings-section.check-list ul li span.label {
+    color: #ddd;
+}
+
 .account-settings .input input,
 .account-settings .input select,
+.account-settings .input .select_input select,
 .account-settings .input textarea {
     background-color: #404040;
     color: #ddd;
@@ -686,6 +714,11 @@ header #nav_site ul li a {
 
 .ratings-page .filters {
     background-color: #333 !important;
+}
+
+.ratings-page .filters select {
+    background-color: #333;
+    color: #ddd;
 }
 
 `);
