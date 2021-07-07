@@ -205,14 +205,21 @@ header #nav_site ul li a {
 }
 
 .indiv_item .user-info .name p a,
-.indiv_item .checkin .checkin-info .beer p a {
+.indiv_item .checkin .checkin-info .beer p a,
+.indiv_item .badge-checkin .beer p a {
     color: #ffc000 !important;
 }
 
 .indiv_item .user-info .name p a:hover,
 .indiv_item .checkin .checkin-info .beer p a:hover,
-.indiv_item .checkin .checkin-info .beer span a:hover {
+.indiv_item .checkin .checkin-info .beer span a:hover,
+.indiv_item .badge-checkin .beer p a:hover {
     color: #c60 !important;
+}
+
+.indiv_item .badge-checkin .beer span a,
+.indiv_item .comments ul li .comment-details .edit_comment a.cancel {
+    color: #888 !important;
 }
 
 .indiv_item .cheers:after {
